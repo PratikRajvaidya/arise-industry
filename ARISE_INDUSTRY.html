@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ARISE INDUSTRY - Business Promotion</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background: #0c0c0c;
+      color: #e4c465;
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+
+    #cinematic-intro {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: black;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      z-index: 9999;
+      animation: introFadeOut 3s ease forwards;
+    }
+
+    .intro-glow {
+      width: 280px;
+      height: 280px;
+      background: radial-gradient(circle, rgba(228,196,101,0.9), rgba(0,0,0,0));
+      filter: blur(60px);
+      animation: glowPulse 2s ease-in-out infinite;
+    }
+
+    .intro-text {
+      font-size: 55px;
+      color: #e4c465;
+      font-weight: 700;
+      letter-spacing: 3px;
+      position: absolute;
+      animation: textReveal 1.7s ease-out forwards;
+      opacity: 0;
+    }
+
+    @keyframes glowPulse {
+      0%,100% { transform: scale(0.85); opacity: 0.7; }
+      50% { transform: scale(1.15); opacity: 1; }
+    }
+
+    @keyframes textReveal {
+      0% { opacity: 0; filter: blur(20px); transform: scale(0.85); }
+      100% { opacity: 1; filter: blur(0); transform: scale(1); }
+    }
+
+    @keyframes introFadeOut {
+      0% { opacity: 1; }
+      80% { opacity: 1; }
+      100% { opacity: 0; visibility: hidden; }
+    }
+
+    header {
+      padding: 30px;
+      display: flex;
+      justify-content: center;
+      background: #0c0c0c;
+    }
+
+    header img {
+      width: 200px;
+      border-radius: 12px;
+      box-shadow: 0 0 25px rgba(228,196,101,0.4);
+    }
+
+    nav {
+      display: flex;
+      justify-content: center;
+      gap: 40px;
+      padding: 20px;
+      border-top: 1px solid #262626;
+      border-bottom: 1px solid #262626;
+      background: #0c0c0c;
+      position: sticky;
+      top: 0;
+      backdrop-filter: blur(8px);
+    }
+
+    nav a {
+      color: #e4c465;
+      text-decoration: none;
+      font-size: 18px;
+      font-weight: 600;
+      transition: 0.3s;
+    }
+
+    nav a:hover {
+      color: white;
+    }
+
+    .hero {
+      text-align: center;
+      padding: 130px 20px;
+      background: radial-gradient(circle, #1a1a1a, #000000);
+      animation: fadeIn 1.5s ease forwards;
+    }
+
+    .hero h1 {
+      font-size: 60px;
+      letter-spacing: 4px;
+      font-weight: 700;
+    }
+
+    .hero p {
+      font-size: 22px;
+      color: #d8b45a;
+    }
+
+    section {
+      padding: 90px 12%;
+      animation: fadeIn 1.5s ease forwards;
+    }
+
+    h2 {
+      font-size: 40px;
+      margin-bottom: 30px;
+      color: #e4c465;
+    }
+
+    .about-text {
+      font-size: 20px;
+      color: #c9b27a;
+      max-width: 900px;
+      margin: auto;
+    }
+
+    .services {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 30px;
+      margin-top: 40px;
+    }
+
+    .card {
+      background: #141414;
+      padding: 30px;
+      border-radius: 15px;
+      border: 1px solid #2a2a2a;
+      box-shadow: 0 0 20px rgba(228, 196, 101, 0.08);
+      transition: 0.3s;
+    }
+
+    .card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 0 30px rgba(228, 196, 101, 0.18);
+    }
+
+    .card h3 {
+      font-size: 24px;
+      margin-bottom: 15px;
+    }
+
+    .contact p {
+      font-size: 20px;
+      margin: 10px 0;
+      color: #d8b45a;
+    }
+
+    footer {
+      background: #0c0c0c;
+      text-align: center;
+      padding: 25px;
+      border-top: 1px solid #262626;
+      color: #c9b27a;
+      margin-top: 40px;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); filter: blur(8px); }
+      to { opacity: 1; transform: translateY(0); filter: blur(0); }
+    }
+  </style>
+</head>
+<body>
+  <div id="cinematic-intro">
+    <div class="intro-glow"></div>
+    <h1 class="intro-text">ARISE INDUSTRY</h1>
+  </div>
+
+  <header>
+    <img src="https://i.ibb.co/FL5F1JyZ/logo.png" alt="Arise Industry Logo" />
+  </header>
+
+  <nav>
+    <a href="#home">Home</a>
+    <a href="#about">About</a>
+    <a href="#services">Services</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <div class="hero" id="home">
+    <h1>ARISE INDUSTRY</h1>
+    <p>Trading • Finance • Education</p>
+  </div>
+
+  <section id="about">
+    <h2>About Us</h2>
+    <p class="about-text">
+      Arise Industry is a modern and professional education-driven company focused on trading, finance, and business development. We help individuals gain financial knowledge, develop trading skills, and build a strong business mindset to grow in today’s competitive world.
+    </p>
+  </section>
+
+  <section id="gallery">
+    <h2>Trading & Finance Gallery</h2>
+    <div class="services">
+      <div class="card"><img src="https://via.placeholder.com/300x200" style="width:100%; border-radius:10px;" /></div>
+      <div class="card"><img src="https://via.placeholder.com/300x200" style="width:100%; border-radius:10px;" /></div>
+      <div class="card"><img src="https://via.placeholder.com/300x200" style="width:100%; border-radius:10px;" /></div>
+    </div>
+  </section>
+
+  <section id="services">
+    <h2>Our Services</h2>
+    <div class="services">
+      <div class="card">
+        <h3>Trading Guidance</h3>
+        <p>We provide expert trading analysis, market strategies, and personal mentorship for better growth in financial markets.</p>
+      </div>
+      <div class="card">
+        <h3>Finance Education</h3>
+        <p>Learn budgeting, investments, wealth management, and long-term financial planning with our structured programs.</p>
+      </div>
+      <div class="card">
+        <h3>Business Promotion</h3>
+        <p>Premium branding, business growth support, and strategic planning to help companies scale and stand out.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="contact">
+    <h2>Contact Us</h2>
+    <p>Email: pratikrajvaidya04@gmail.com</p>
+    <p>Phone: +91 8308789019</p>
+  </section>
+
+  <footer>
+    © 2025 Arise Industry — All Rights Reserved
+  </footer>
+
+  <a href="https://www.youtube.com/@Arise_with_pratik_01" target="_blank" style="position: fixed; right: 15px; top: 50%; transform: translateY(-50%); background: #e4c465; color: #000; padding: 14px 20px; border-radius: 50px; font-weight: 700; text-decoration: none; box-shadow: 0 0 12px rgba(0,0,0,0.4); display: flex; align-items: center; gap: 10px;">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/b/b8/YouTube_Logo_2017.svg" style="width: 28px; height: auto;" />
+    YouTube
+  </a>
+</body>
+</html>
